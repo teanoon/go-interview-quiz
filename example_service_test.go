@@ -10,6 +10,7 @@ func TestCanFillGap(t *testing.T) {
 	assert.True(t, CanFillGap(3, 1, 9))
 	assert.False(t, CanFillGap(4, 1, 8))
 	assert.True(t, CanFillGap(3, 2, 10))
+	assert.True(t, CanFillGap(5, 1, 10))
 }
 
 func TestLengthEncode(t *testing.T) {
