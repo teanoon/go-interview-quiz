@@ -9,17 +9,17 @@ type DatabaseClient struct {
 
 var DBClient = &DatabaseClient{}
 
-func (c *DatabaseClient) GetValue1(value int32) int32 {
+func (c *DatabaseClient) FindByValue1(value int32) int32 {
 	time.Sleep(10 * time.Millisecond)
-	return 1
+	return value
 }
 
-func (c *DatabaseClient) GetSlowValue2(value int32) int32 {
+func (c *DatabaseClient) FindByValue2(value int32) int32 {
 	time.Sleep(100 * time.Millisecond)
-	return 1
+	return value
 }
 
-func (c *DatabaseClient) Sum(value1, value2 int32) int32 {
+func (c *DatabaseClient) FindByValues(value1, value2 int32) int32 {
 	time.Sleep(10 * time.Millisecond)
 	return value1 + value2
 }

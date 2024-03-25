@@ -28,8 +28,7 @@ func LengthEncode(input string) string {
 	return ""
 }
 
-// 给定一个整数，返回其数字的反向编码。
-// 如 123 -> 321
-func Reverse(input int) int {
-	return 0
+// 使用函数 SlowEncrypt 字符串加密，尽可能快地返回加密后的字符串
+func LengthEncrypt(input string) string {
+	return ""
 }

@@ -22,8 +22,11 @@ func TestLengthEncode(t *testing.T) {
 	assert.Equal(t, "12W1B12W3B24W1B14W", LengthEncode("WWWWWWWWWWWWBWWWWWWWWWWWWBBBWWWWWWWWWWWWWWWWWWWWWWWWBWWWWWWWWWWWWWW"))
 }
 
-func TestReverse(t *testing.T) {
-	assert.Equal(t, 321, Reverse(123))
-	assert.Equal(t, 0, Reverse(0))
-	assert.Equal(t, 1, Reverse(10))
+func TestLengthEncrypt(t *testing.T) {
+	assert.Equal(t, "b", LengthEncrypt("a"))
+	assert.Equal(t, "bcd", LengthEncrypt("abc"))
+	assert.Equal(
+		t,
+		"bcdefghijklmnopqrstuvwxyzbcdefghijklmnopqrstuvwxyzbcdefghijklmnopqrstuvwxyz",
+		LengthEncrypt("abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy"))
 }
