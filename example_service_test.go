@@ -6,16 +6,6 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestCanFillGap(t *testing.T) {
-	assert.True(t, CanFillGap(3, 1, 9))
-	assert.True(t, CanFillGap(3, 2, 10))
-	assert.True(t, CanFillGap(6, 2, 8))
-	assert.False(t, CanFillGap(4, 1, 21))
-	assert.False(t, CanFillGap(1, 2, 14))
-	assert.False(t, CanFillGap(2, 2, 8))
-	assert.False(t, CanFillGap(3, 1, 12))
-}
-
 func TestLengthEncode(t *testing.T) {
 	assert.Equal(t, "1a1b1c", LengthEncode("abc"))
 	assert.Equal(t, "3a2b1c", LengthEncode("aaabbc"))
@@ -29,4 +19,14 @@ func TestLengthEncrypt(t *testing.T) {
 		t,
 		"bcdefghijklmnopqrstuvwxyzbcdefghijklmnopqrstuvwxyzbcdefghijklmnopqrstuvwxyz",
 		LengthEncrypt("abcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxyabcdefghijklmnopqrstuvwxy"))
+}
+
+func TestCanFillGap(t *testing.T) {
+	assert.True(t, CanFillGap(3, 1, 9))
+	assert.True(t, CanFillGap(3, 2, 10))
+	assert.True(t, CanFillGap(6, 2, 8))
+	assert.False(t, CanFillGap(4, 1, 21))
+	assert.False(t, CanFillGap(1, 2, 14))
+	assert.False(t, CanFillGap(2, 2, 8))
+	assert.False(t, CanFillGap(3, 1, 12))
 }
